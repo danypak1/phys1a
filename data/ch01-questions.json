@@ -1,0 +1,293 @@
+{
+  "module": "ch01",
+  "title": "Units, Vectors and the Language of Physics",
+  "mcqIntro": "8 quick concept checks — the traps this chapter sets. Pick an answer to check it instantly; a wrong pick tells you exactly what to re-read. The real work of this module is in the 16 written problems below.",
+  "mcq": [
+    {
+      "id": "A1",
+      "topic": "Vector components",
+      "stem": "A 40 N force acts on a crate. The angle θ is measured between the force and the **+y-axis**. Which pair gives the force's components?",
+      "options": {
+        "a": "x: 40 sin θ, y: 40 cos θ",
+        "b": "x: 40 cos θ, y: 40 sin θ",
+        "c": "x: 40 tan θ, y: 40 sin θ",
+        "d": "x: 40 cos θ, y: 40 tan θ"
+      }
+    },
+    {
+      "id": "A2",
+      "topic": "Vector addition",
+      "stem": "Two forces, of magnitudes 6.0 N and 8.0 N, act at the same point. The angle between them is not given. Which value of the resultant's magnitude is **impossible**?",
+      "options": {
+        "a": "2.0 N",
+        "b": "15.0 N",
+        "c": "10.0 N",
+        "d": "14.0 N"
+      }
+    },
+    {
+      "id": "A3",
+      "topic": "Dot and cross products",
+      "stem": "A constant force **F** acts on a body that undergoes a displacement **d**. For which angle φ between them is `F · d` negative?",
+      "options": {
+        "a": "φ = 150°",
+        "b": "φ = 90°",
+        "c": "φ = 45°",
+        "d": "φ = 30°"
+      }
+    },
+    {
+      "id": "A4",
+      "topic": "Vector components",
+      "stem": "A vector has `Aₓ = −5.0 m` and `Aᵧ = +5.0 m`. A calculator returns `arctan(Aᵧ/Aₓ) = −45°`. Measured counterclockwise from the +x-axis, the vector's direction is",
+      "options": {
+        "a": "−45°",
+        "b": "225°",
+        "c": "135°",
+        "d": "315°"
+      }
+    },
+    {
+      "id": "A5",
+      "topic": "Units and conversion",
+      "stem": "A capacitor plate has an area of 2000 cm². Expressed in SI base units, that area is",
+      "options": {
+        "a": "2.0 m²",
+        "b": "0.20 m²",
+        "c": "20 m²",
+        "d": "0.020 m²"
+      }
+    },
+    {
+      "id": "A6",
+      "topic": "Significant figures",
+      "stem": "A plate is measured as 1.2 m by 0.0345 m. Its area, written to the correct number of significant figures, is",
+      "options": {
+        "a": "0.0414 m²",
+        "b": "0.04140 m²",
+        "c": "0.04 m²",
+        "d": "0.041 m²"
+      }
+    },
+    {
+      "id": "A7",
+      "topic": "Dimensional analysis",
+      "stem": "In the expressions below *v* is a speed, *x* a distance and *t* a time. Which one **cannot** represent an acceleration?",
+      "options": {
+        "a": "v²/x",
+        "b": "x/t²",
+        "c": "v t/x",
+        "d": "v/t"
+      }
+    },
+    {
+      "id": "A8",
+      "topic": "Dot and cross products",
+      "stem": "Two non-zero vectors satisfy `A × B = 0`. This tells you that the two vectors are",
+      "options": {
+        "a": "perpendicular to each other",
+        "b": "equal in magnitude",
+        "c": "both in the xy-plane",
+        "d": "parallel or antiparallel"
+      }
+    }
+  ],
+  "short": [
+    {
+      "id": "B1",
+      "topic": "Units and conversion",
+      "prompt": "A speedometer reads 108 km/h. Convert this speed to m/s, showing the cancellation, and state how far the car travels in 2.5 s at that speed."
+    },
+    {
+      "id": "B2",
+      "topic": "Units and conversion",
+      "prompt": "Aluminium has a density of 2.70 g/cm³. (i) Express this density in kg/m³. (ii) Find the mass of a rectangular block measuring 12.0 cm × 8.0 cm × 5.0 cm."
+    },
+    {
+      "id": "B3",
+      "topic": "Significant figures",
+      "prompt": "A rectangular plate is measured as 24.7 cm by 3.5 cm. Give its perimeter and its area, each to the correct number of significant figures, and state which rule you used for each."
+    },
+    {
+      "id": "B4",
+      "topic": "Dimensional analysis",
+      "prompt": "The period of a mass m on a spring of stiffness k (units N/m) is claimed to be `T = 2π√(m/k)`. Show by a dimensional check that this is possible, and show that `T = 2π√(k/m)` is not."
+    },
+    {
+      "id": "B5",
+      "topic": "Vector components",
+      "prompt": "A force of magnitude 25 N points at 210°, measured counterclockwise from the +x-axis. Find its x- and y-components, and state the sign of each without relying on the calculator."
+    },
+    {
+      "id": "B6",
+      "topic": "Vector components",
+      "prompt": "A 3.0 kg block rests on a slope inclined at 20° to the horizontal. Taking x along the slope and y perpendicular to it, find the two components of the block's weight. Use g = 9.80 m/s²."
+    },
+    {
+      "id": "B7",
+      "topic": "Vector addition",
+      "prompt": "A walker goes 40 m at 0°, then 30 m at 120°, then 25 m at 215° (all angles counterclockwise from the +x-axis). Find the magnitude and direction of the resultant displacement."
+    },
+    {
+      "id": "B8",
+      "topic": "Vector addition",
+      "prompt": "Three forces act on a small ring: 5.0 N at 0°, 8.0 N at 130° and 6.0 N at 250°, all measured counterclockwise from the +x-axis. Find the magnitude and direction of the net force."
+    },
+    {
+      "id": "B9",
+      "topic": "Dot and cross products",
+      "prompt": "For **A** = 4î − 3ĵ + 2k̂ and **B** = −î + 5ĵ + 2k̂, compute `A · B` and the angle between the two vectors."
+    },
+    {
+      "id": "B10",
+      "topic": "Dot and cross products",
+      "prompt": "A force **F** = (6î + 8ĵ) N is applied at the point **r** = 0.30î m measured from a pivot at the origin. Compute the vector `r × F`, give its magnitude, and state which way it points."
+    }
+  ],
+  "extended": [
+    {
+      "id": "C1",
+      "topic": "Vector addition",
+      "title": "Laying out a survey",
+      "intro": "A surveyor walks three straight legs across flat ground: 120 m at 30°, then 85 m at 145°, then 60 m at 255°, all measured counterclockwise from east (the +x-axis).",
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Resolve each leg into x- and y-components, setting the work out as a table. [3 marks]"
+        },
+        {
+          "id": "b",
+          "prompt": "Find the magnitude of the surveyor's resultant displacement and its direction counterclockwise from east. [3 marks]"
+        },
+        {
+          "id": "c",
+          "prompt": "State the total distance walked, and explain why it is not equal to your answer to (b). [2 marks]"
+        },
+        {
+          "id": "d",
+          "prompt": "Give, in unit-vector form, the single displacement that would take the surveyor straight back to the starting point. [2 marks]"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "topic": "Dot and cross products",
+      "title": "Towing a car along a level road",
+      "intro": "A car is towed 18 m along a straight, level road. The rope is under a constant tension of 250 N and makes an angle of 35° above the horizontal. A constant friction force of 150 N opposes the motion.",
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Describe the free-body diagram of the car — every force on it and its direction — and resolve the rope tension into horizontal and vertical components. [3 marks]"
+        },
+        {
+          "id": "b",
+          "prompt": "Taking the displacement as 18î m, compute `T · d` for the tension using the component form of the dot product. [2 marks]"
+        },
+        {
+          "id": "c",
+          "prompt": "Compute the dot product of the friction force with the same displacement, and say what its sign means physically. [3 marks]"
+        },
+        {
+          "id": "d",
+          "prompt": "Explain why the vertical component of the tension contributes nothing to either dot product. [2 marks]"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "topic": "Dimensional analysis",
+      "title": "A formula you only half-remember",
+      "intro": "In an exam you need the speed of a wave on a stretched string. You remember it involves the tension F (in newtons) and the mass per unit length μ (in kg/m), but not whether it is `v = √(F/μ)` or `v = √(μ/F)`.",
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Write the dimensions of F and of μ, and use them to decide which of the two expressions can be a speed. [3 marks]"
+        },
+        {
+          "id": "b",
+          "prompt": "State one thing about the formula that a dimensional check can never confirm, and explain why. [2 marks]"
+        },
+        {
+          "id": "c",
+          "prompt": "Using F = 64 N and μ = 0.010 kg/m, evaluate the surviving expression, giving the answer to the correct number of significant figures. [3 marks]"
+        },
+        {
+          "id": "d",
+          "prompt": "Without recomputing, state the factor by which the speed changes if the tension is quadrupled, and justify it from the formula. [2 marks]"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "topic": "Dot and cross products",
+      "title": "Tightening a bolt",
+      "intro": "A spanner of length 0.22 m is fitted to a bolt. You pull on the free end with a force of 160 N, in the plane of the page, at 65° to the spanner's handle. The bolt's axis points out of the page.",
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Compute the magnitude of the torque about the bolt. [2 marks]"
+        },
+        {
+          "id": "b",
+          "prompt": "State the direction of the torque vector, naming the rule you used, and say what changes if the force is reversed. [2 marks]"
+        },
+        {
+          "id": "c",
+          "prompt": "Find the largest torque this same 160 N force could produce on this spanner, and explain what makes it the largest. [2 marks]"
+        },
+        {
+          "id": "d",
+          "prompt": "Taking x along the handle and y perpendicular to it in the plane of the page, write **r** and **F** in components and evaluate `r × F`. [3 marks]"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "topic": "Vector components",
+      "title": "Choosing the axes for a ramp",
+      "intro": "A 6.0 kg block is placed on a ramp inclined at 28° to the horizontal. Use g = 9.80 m/s². No numbers about friction are given, and none are needed.",
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Describe the free-body diagram of the block: name each force acting on it and the direction in which it acts. [2 marks]"
+        },
+        {
+          "id": "b",
+          "prompt": "Taking x down the slope and y perpendicular to the surface, compute the two components of the block's weight. [3 marks]"
+        },
+        {
+          "id": "c",
+          "prompt": "Explain why the component along the slope carries sin 28° rather than cos 28°, referring to the angle in the triangle. [2 marks]"
+        },
+        {
+          "id": "d",
+          "prompt": "If you kept horizontal and vertical axes instead, state which forces would then need resolving and why the algebra gets longer. [2 marks]"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "topic": "Vector addition",
+      "title": "A drone flown in three dimensions",
+      "intro": "A drone takes off from the origin and flies three straight legs, in metres: **d₁** = 50î, then **d₂** = 80ĵ + 25k̂, then **d₃** = −30î − 20ĵ + 15k̂. The k̂ direction is vertically upward.",
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Give the drone's resultant displacement from the origin in unit-vector form. [2 marks]"
+        },
+        {
+          "id": "b",
+          "prompt": "Find the magnitude of that displacement, and state the drone's height above the take-off point. [2 marks]"
+        },
+        {
+          "id": "c",
+          "prompt": "Compute the total distance flown along the path, and explain why it exceeds the answer to (b). [3 marks]"
+        },
+        {
+          "id": "d",
+          "prompt": "Write the unit vector pointing from the origin towards the drone's final position, and verify that its magnitude is 1. [3 marks]"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "_note": "PROTOTYPE ONLY. In production this file is never shipped to the client — it lives behind the auth API (Cloudflare Worker) and is served per-question to logged-in students.",
+  "mcq": {
+    "A1": {
+      "answer": "a",
+      "review": "1.8",
+      "explanation": "`A cos θ` gives the x-component **only when θ is measured from the x-axis**. Here θ is measured from the +y-axis, so the roles swap: the x-component is the one across the angle, `40 sin θ`, and the y-component is `40 cos θ`. Redraw the triangle before writing anything down — this single decision is what makes the incline problems of Chapter 5 come out right or wrong.",
+      "diagnostics": {
+        "b": "You applied the formula for an angle measured from the x-axis. With θ taken from the y-axis, sine and cosine swap places.",
+        "c": "A component is a projection, so it uses sine or cosine. A tangent exceeds 1 above 45°, which would make a component larger than the vector itself.",
+        "d": "The y-component is the one along the axis the angle is measured from, so it takes the cosine; a tangent cannot appear in a component at all."
+      }
+    },
+    "A2": {
+      "answer": "b",
+      "review": "1.9",
+      "explanation": "The resultant of two vectors can be anything from `|8 − 6| = 2.0 N` (antiparallel) up to `8 + 6 = 14.0 N` (parallel), and every value in between corresponds to some angle. 15.0 N lies outside that range, so no angle produces it. Magnitudes do not add unless the vectors are parallel.",
+      "diagnostics": {
+        "a": "2.0 N is the minimum, reached when the forces are antiparallel and partly cancel. It is possible, not impossible.",
+        "c": "10.0 N is the value at 90°, where `√(6² + 8²) = 10`. It is squarely inside the range.",
+        "d": "14.0 N is the maximum, reached when the two forces point the same way. Possible, and the largest possible."
+      }
+    },
+    "A3": {
+      "answer": "a",
+      "review": "1.11",
+      "explanation": "`F · d = Fd cos φ`, and `cos φ` is negative only for φ between 90° and 180°. At 150°, `cos 150° = −0.866`, so the dot product is negative: the force has a component *opposing* the displacement. This is exactly how friction does negative work in Chapter 6.",
+      "diagnostics": {
+        "b": "At 90° the cosine is zero, so the dot product is zero rather than negative — the force has no component along the displacement.",
+        "c": "At 45° the cosine is +0.707, so the product is positive: the force partly helps the motion along.",
+        "d": "At 30° the cosine is +0.866, giving a large positive value — nearly the maximum of Fd."
+      }
+    },
+    "A4": {
+      "answer": "c",
+      "review": "1.8",
+      "explanation": "The calculator's arctan only ever returns an angle between −90° and +90°, because tan θ repeats every 180°. Here `Aₓ < 0` and `Aᵧ > 0`, which puts the vector up and to the left — the second quadrant. Add 180° to the calculator's −45° to get **135°**. Sketching the components settles it in two seconds.",
+      "diagnostics": {
+        "a": "That is the raw calculator output, which points down and to the right. Your components point up and to the left.",
+        "b": "225° points down and to the left, so both components would be negative. Only `Aₓ` is.",
+        "d": "315° points down and to the right — the quadrant the calculator assumed. It matches neither of your component signs."
+      }
+    },
+    "A5": {
+      "answer": "b",
+      "review": "1.3",
+      "explanation": "A centimetre is 10⁻² m, so a **square** centimetre is `(10⁻² m)² = 10⁻⁴ m²`. Then `2000 × 10⁻⁴ = 0.20 m²`. Squaring the conversion factor — including its power of ten — is the step most often skipped, and it appears in every capacitor problem where the plate area is quoted in cm².",
+      "diagnostics": {
+        "a": "You divided by 1000 rather than by 10⁴, which is the conversion for volume-like reasoning, not for area.",
+        "c": "You used 10⁻² instead of 10⁻⁴ — the factor was not squared along with the unit.",
+        "d": "You squared once too often, using 10⁻⁵. The area conversion is exactly two powers of ten per length conversion."
+      }
+    },
+    "A6": {
+      "answer": "d",
+      "review": "1.5",
+      "explanation": "`1.2 × 0.0345 = 0.0414 m²` on the calculator, but for multiplication the answer takes the **fewest significant figures** among the inputs. 1.2 carries two and 0.0345 carries three, so the result carries two: **0.041 m²**. Leading zeros are not significant.",
+      "diagnostics": {
+        "a": "That is the unrounded product, quoting three figures. The 1.2 m measurement does not support the third.",
+        "b": "Four figures claims more precision than either measurement has, and the trailing zero asserts a digit nobody measured.",
+        "c": "One figure throws away precision you do have: 1.2 supports two significant figures, not one."
+      }
+    },
+    "A7": {
+      "answer": "c",
+      "review": "1.4",
+      "explanation": "`[v t/x] = (L/T)(T)/L = 1` — dimensionless, so it cannot be an acceleration, which must be L/T². Checking the others: `[v²/x] = (L²/T²)/L = L/T²` ✓, `[x/t²] = L/T²` ✓, `[v/t] = L/T²` ✓.",
+      "diagnostics": {
+        "a": "`v²/x` gives (L²/T²)/L = L/T², which is exactly an acceleration — it is the centripetal formula of Chapter 3.",
+        "b": "`x/t²` is L/T², an acceleration. It is the constant-acceleration formula with the numerical factor stripped out.",
+        "d": "`v/t` is (L/T)/T = L/T², the definition of average acceleration."
+      }
+    },
+    "A8": {
+      "answer": "d",
+      "review": "1.12",
+      "explanation": "`|A × B| = AB sin φ`, and since neither magnitude is zero, the product vanishes only when `sin φ = 0` — that is, φ = 0° or 180°. The vectors are parallel or antiparallel. (It is the **dot** product that vanishes for perpendicular vectors.)",
+      "diagnostics": {
+        "a": "Perpendicular vectors give the *largest* cross product, `AB`, and a zero dot product. You have the two products swapped.",
+        "b": "Equal magnitudes say nothing about the angle, and the cross product depends only on the angle and the magnitudes.",
+        "c": "Two vectors always define a plane, and the cross product is perpendicular to it. Lying in the xy-plane makes the product point along z, not vanish."
+      }
+    }
+  },
+  "short": {
+    "B1": {
+      "review": "1.3",
+      "model": "Multiply by fractions equal to 1 so the unwanted units cancel: `108 km/h × (1000 m / 1 km) × (1 h / 3600 s)`. The km cancels and the h cancels, leaving a speed of `108 × 1000 / 3600 = 30.0 m/s`. The distance travelled in 2.5 s is `d = vt = 30.0 × 2.5 = 75 m`.",
+      "marks": [
+        "Conversion set out as cancelling factors of 1000 m/km and 1 h/3600 s",
+        "Speed 30.0 m/s",
+        "Distance 75 m from d = vt"
+      ]
+    },
+    "B2": {
+      "review": "1.3",
+      "model": "(i) `2.70 g/cm³ × (10⁻³ kg / 1 g) × (1 cm³ / 10⁻⁶ m³) = 2.70 × 10³ kg/m³ = 2700 kg/m³`. Note the cubed conversion: 1 cm³ = 10⁻⁶ m³. (ii) The volume is `12.0 × 8.0 × 5.0 = 480 cm³ = 4.80 × 10⁻⁴ m³`, so the mass is `2700 × 4.80 × 10⁻⁴ = 1.296 kg`. The least precise measurement carries two significant figures, so quote **1.3 kg**.",
+      "marks": [
+        "Density 2700 kg/m³ with the cubed factor 10⁻⁶ m³ per cm³ used",
+        "Volume 480 cm³ converted to 4.80 × 10⁻⁴ m³",
+        "Mass 1.3 kg, rounded to two significant figures"
+      ]
+    },
+    "B3": {
+      "review": "1.5",
+      "model": "Perimeter is a **sum**, so the decimal-places rule applies: `2(24.7 + 3.5) = 56.4 cm`. Both inputs are given to one decimal place, so the answer keeps one. Area is a **product**, so the significant-figures rule applies: `24.7 × 3.5 = 86.45 cm²`, and 3.5 carries only two significant figures, so the answer is **86 cm²**.",
+      "marks": [
+        "Perimeter 56.4 cm, justified by the decimal-places rule for addition",
+        "Area 86 cm², justified by the significant-figures rule for multiplication",
+        "Both rules correctly named for the operation they belong to"
+      ]
+    },
+    "B4": {
+      "review": "1.4",
+      "model": "From `F = ma`, `[F] = ML/T²`; and k is a force per length, so `[k] = (ML/T²)/L = M/T²`. Then `[m/k] = M/(M/T²) = T²`, whose square root is T — a time, so `T = 2π√(m/k)` is dimensionally possible. The other version gives `[k/m] = 1/T²`, whose square root is 1/T, a frequency rather than a period, so `T = 2π√(k/m)` is impossible. Note the check says nothing about the factor 2π.",
+      "marks": [
+        "Dimensions of k derived as M/T² from force per unit length",
+        "√(m/k) shown to have dimension T, so the first version survives",
+        "√(k/m) shown to be 1/T, so the second version is rejected"
+      ]
+    },
+    "B5": {
+      "review": "1.8",
+      "model": "The x-component is `Fₓ = 25 cos 210° = −21.7 N` and the y-component is `Fᵧ = 25 sin 210° = −12.5 N`. Both signs are negative without a calculator: 210° lies in the third quadrant, which is down and to the left, so the vector points along −x and −y. Check: `√(21.7² + 12.5²) = 25.0 N`.",
+      "marks": [
+        "x-component −21.7 N",
+        "y-component −12.5 N",
+        "Both signs justified by the third quadrant rather than by the calculator"
+      ]
+    },
+    "B6": {
+      "review": "1.13",
+      "model": "The weight is `w = mg = 3.0 × 9.80 = 29.4 N`, vertically down. With x along the slope and y perpendicular to it, the weight makes an angle of 20° with the −y-axis, so the component along the slope is `w sin 20° = 29.4 × 0.342 = 10.1 N` (down the slope) and the component perpendicular to the surface is `w cos 20° = 29.4 × 0.940 = 27.6 N` (into the surface). Check: `√(10.1² + 27.6²) = 29.4 N` ✓.",
+      "marks": [
+        "Weight computed as 29.4 N",
+        "Component along the slope 10.1 N using sin 20°",
+        "Component perpendicular to the surface 27.6 N using cos 20°"
+      ]
+    },
+    "B7": {
+      "review": "1.9",
+      "model": "Resolve each leg: `(40.0, 0)`, `(30 cos 120°, 30 sin 120°) = (−15.0, 26.0)`, `(25 cos 215°, 25 sin 215°) = (−20.5, −14.3)`. Summing: `Rₓ = 4.5 m`, `Rᵧ = 11.6 m`. Magnitude `R = √(4.5² + 11.6²) = 12.5 m`. Direction: `arctan(11.6/4.5) = 68.8°`, and both components are positive, so the vector is in the first quadrant and no correction is needed: **12.5 m at 68.8°**.",
+      "marks": [
+        "All three legs resolved into components with correct signs",
+        "Resultant components 4.5 m and 11.6 m",
+        "Magnitude 12.5 m and direction 68.8° with the quadrant checked"
+      ]
+    },
+    "B8": {
+      "review": "1.9",
+      "model": "Components: `(5.0, 0)`, `(8 cos 130°, 8 sin 130°) = (−5.1, 6.1)`, `(6 cos 250°, 6 sin 250°) = (−2.1, −5.6)`. Sums: `Fₓ = −2.2 N`, `Fᵧ = 0.5 N`. Magnitude `√(2.2² + 0.5²) = 2.2 N`. `arctan(0.5 / −2.2) = −12.6°`, and `Fₓ < 0` with `Fᵧ > 0` places it in the second quadrant, so add 180°: **2.2 N at 167°**.",
+      "marks": [
+        "Three forces resolved into components",
+        "Net components −2.2 N and 0.5 N",
+        "Magnitude 2.2 N and direction 167° after the quadrant correction"
+      ]
+    },
+    "B9": {
+      "review": "1.11",
+      "model": "`A · B = (4)(−1) + (−3)(5) + (2)(2) = −4 − 15 + 4 = −15`. The magnitudes are `A = √(16 + 9 + 4) = 5.39` and `B = √(1 + 25 + 4) = 5.48`. Then `cos φ = −15 / (5.39 × 5.48) = −0.509`, so `φ = 121°`. The negative dot product already told you the angle exceeds 90° before any arccosine was taken.",
+      "marks": [
+        "Dot product −15 from the component form",
+        "Magnitudes 5.39 and 5.48",
+        "Angle 121°, consistent with the negative sign of the dot product"
+      ]
+    },
+    "B10": {
+      "review": "1.12",
+      "model": "With `r = (0.30, 0, 0)` and `F = (6, 8, 0)`, the cross product is `(r × F)ₓ = (0)(0) − (0)(8) = 0`, `(r × F)ᵧ = (0)(6) − (0.30)(0) = 0`, `(r × F)_z = (0.30)(8) − (0)(6) = 2.4`. So `r × F = 2.4 k̂ N·m`, of magnitude **2.4 N·m**, pointing along +z — out of the page, by the right-hand rule. Only the 8 N component contributes, because the 6 N component is parallel to **r**.",
+      "marks": [
+        "Cross product evaluated as 2.4 k̂ N·m",
+        "Magnitude 2.4 N·m",
+        "Direction out of the page from the right-hand rule"
+      ]
+    }
+  },
+  "extended": {
+    "C1": {
+      "review": "1.9",
+      "parts": {
+        "a": {
+          "model": "Each leg is resolved with cos for x and sin for y:\n\n| Leg | x-component | y-component |\n|---|---|---|\n| First: 120 m at 30° | 120 cos 30° = +103.9 m | 120 sin 30° = +60.0 m |\n| Second: 85 m at 145° | 85 cos 145° = −69.6 m | 85 sin 145° = +48.8 m |\n| Third: 60 m at 255° | 60 cos 255° = −15.5 m | 60 sin 255° = −58.0 m |\n\nThe signs follow the quadrants: the second leg points up and to the left, the third down and to the left.",
+          "marks": [
+            "First leg resolved as +103.9 m and +60.0 m",
+            "Second leg resolved with a negative x-component, −69.6 m and +48.8 m",
+            "Third leg resolved with both components negative, −15.5 m and −58.0 m"
+          ]
+        },
+        "b": {
+          "model": "Summing the columns: `Rₓ = 103.9 − 69.6 − 15.5 = 18.8 m` and `Rᵧ = 60.0 + 48.8 − 58.0 = 50.8 m`. Magnitude `R = √(18.8² + 50.8²) = 54.2 m`. Direction `arctan(50.8/18.8) = 69.7°`; both components are positive, so the resultant lies in the first quadrant and the calculator value stands: **54.2 m at 69.7° counterclockwise from east**.",
+          "marks": [
+            "Components summed to 18.8 m and 50.8 m",
+            "Magnitude 54.2 m",
+            "Direction 69.7° with the quadrant confirmed from the signs"
+          ]
+        },
+        "c": {
+          "model": "The total distance walked is `120 + 85 + 60 = 265 m`, nearly five times the resultant. Distance is a scalar that accumulates along the path, while displacement is the single vector from start to finish and depends only on those two points. The legs partly cancel, so the walking largely undoes itself.",
+          "marks": [
+            "Total distance 265 m stated",
+            "Difference explained as path-dependent distance versus start-to-finish displacement"
+          ]
+        },
+        "d": {
+          "model": "The return trip is the negative of the resultant: `−18.8î − 50.8ĵ m`, which is 54.2 m at `69.7° + 180° = 249.7°` counterclockwise from east.",
+          "marks": [
+            "Return displacement given as −18.8î − 50.8ĵ m",
+            "Recognition that it is the negative of the resultant, same magnitude and opposite direction"
+          ]
+        }
+      }
+    },
+    "C2": {
+      "review": "1.11",
+      "parts": {
+        "a": {
+          "model": "Four forces act on the car: the weight `mg` vertically down; the normal force from the road vertically up; the rope tension of 250 N at 35° above the horizontal, pointing forward and up; and the 150 N friction force horizontally backward, opposing the motion. Resolving the tension: `Tₓ = 250 cos 35° = 204.8 N` forward and `Tᵧ = 250 sin 35° = 143.4 N` upward.",
+          "marks": [
+            "All four forces named with directions: weight, normal, tension, friction",
+            "Horizontal component of the tension 204.8 N",
+            "Vertical component of the tension 143.4 N"
+          ]
+        },
+        "b": {
+          "model": "With `T = (204.8, 143.4) N` and `d = (18, 0) m`, the dot product is `T · d = (204.8)(18) + (143.4)(0) = 3686 J ≈ 3.7 × 10³ J`. It is positive, since the tension has a forward component along the displacement.",
+          "marks": [
+            "Dot product evaluated from components as 3686 J",
+            "Positive sign identified with the forward component of the tension"
+          ]
+        },
+        "c": {
+          "model": "The friction force is `f = (−150, 0) N`, so `f · d = (−150)(18) = −2700 J`. The negative sign means the force has a component opposite to the displacement: friction removes energy from the car's motion rather than adding it. In Chapter 6 this number is exactly the work done by friction.",
+          "marks": [
+            "Friction written with a negative x-component",
+            "Dot product −2700 J",
+            "Negative sign interpreted as the force opposing the displacement and removing energy"
+          ]
+        },
+        "d": {
+          "model": "The displacement is purely horizontal, so its y-component is zero. In `F · d = FₓDₓ + FᵧDᵧ`, the vertical term is multiplied by zero, so no vertical force contributes — including the vertical part of the tension. Geometrically, that component is perpendicular to the motion, and perpendicular vectors have zero dot product.",
+          "marks": [
+            "Zero y-component of the displacement identified as the reason",
+            "Perpendicular vectors stated to give zero dot product"
+          ]
+        }
+      }
+    },
+    "C3": {
+      "review": "1.4",
+      "parts": {
+        "a": {
+          "model": "Dimensions first: `[F] = ML/T²` from `F = ma`, and `[μ] = M/L` since it is a mass per unit length. Then `[F/μ] = (ML/T²)(L/M) = L²/T²`, and its square root is L/T — a speed. The other ratio gives `[μ/F] = T²/L²`, whose square root is T/L, the reciprocal of a speed. So only `v = √(F/μ)` can be right.",
+          "marks": [
+            "Dimensions ML/T² for F and M/L for μ",
+            "F/μ shown to have dimensions L²/T², whose root is a speed",
+            "μ/F rejected because its root is T/L rather than L/T"
+          ]
+        },
+        "b": {
+          "model": "A dimensional check can never confirm a **dimensionless numerical factor**. `√(F/μ)`, `2√(F/μ)` and `½√(F/μ)` all have identical dimensions, so the method cannot choose between them. It rules formulas out; it never rules one in.",
+          "marks": [
+            "Dimensionless numerical factor identified as invisible to the check",
+            "Explanation that the method can only reject, never confirm"
+          ]
+        },
+        "c": {
+          "model": "`v = √(64 / 0.010) = √6400 = 80 m/s`, so the speed is 80 m/s. The inputs carry two significant figures each, so the answer keeps two: **80 m/s**, or `8.0 × 10¹ m/s` if you want the two figures to be unambiguous.",
+          "marks": [
+            "Ratio 6400 formed with consistent SI units",
+            "Speed 80 m/s obtained",
+            "Two significant figures justified from the inputs"
+          ]
+        },
+        "d": {
+          "model": "The speed goes up by a factor of **2**. The tension sits under a square root, so quadrupling F multiplies v by `√4 = 2`; nothing else in the formula changes.",
+          "marks": [
+            "Factor of 2 stated",
+            "Justified by the square root acting on the tension"
+          ]
+        }
+      }
+    },
+    "C4": {
+      "review": "1.12",
+      "parts": {
+        "a": {
+          "model": "The torque magnitude comes from the formula `τ = rF sin φ`, with φ the angle between the handle and the force: `τ = (0.22 m)(160 N)(sin 65°) = 0.22 × 160 × 0.906 = 31.9 N·m`.",
+          "marks": [
+            "Formula τ = rF sin φ used with φ as the angle between the handle and the force",
+            "Torque 31.9 N·m"
+          ]
+        },
+        "b": {
+          "model": "By the **right-hand rule** — fingers along **r**, curling toward **F** — the thumb points out of the page, so the torque is along +z, out of the page, and the bolt turns counterclockwise as seen by you. Reversing the force reverses the curl, so the torque points into the page and the bolt turns the other way; the magnitude is unchanged, since `A × B = −(B × A)` only flips the sign.",
+          "marks": [
+            "Direction out of the page, obtained from the right-hand rule",
+            "Reversing the force reverses the torque direction while the magnitude stays 31.9 N·m"
+          ]
+        },
+        "c": {
+          "model": "The largest torque is at φ = 90°, where `sin φ = 1`: `τ = 0.22 × 160 = 35.2 N·m`. Pulling perpendicular to the handle puts the whole force into turning the bolt; any other angle wastes part of it pushing along the spanner, where it produces no rotation at all.",
+          "marks": [
+            "Maximum torque 35.2 N·m at 90°",
+            "Explanation that a perpendicular force has no wasted component along the handle"
+          ]
+        },
+        "d": {
+          "model": "With x along the handle, the components are `r = (0.22, 0, 0) m` and `F = 160(cos 65°, sin 65°, 0) = (67.6, 145.0, 0) N`. The cross product has only a z-component: `(r × F)_z = rₓFᵧ − rᵧFₓ = (0.22)(145.0) − 0 = 31.9`. So `r × F = 31.9 k̂ N·m`, agreeing with the magnitude in part (a).",
+          "marks": [
+            "Components r = (0.22, 0, 0) m and F = (67.6, 145.0, 0) N",
+            "Only the z-component non-zero, evaluated as 31.9",
+            "Result 31.9 k̂ N·m, agreeing with the magnitude found earlier"
+          ]
+        }
+      }
+    },
+    "C5": {
+      "review": "1.13",
+      "parts": {
+        "a": {
+          "model": "Three forces act on the block: its **weight**, `mg`, vertically downward; the **normal force** from the ramp surface, perpendicular to the surface and pointing away from it; and **friction**, along the surface, opposing any sliding or tendency to slide. Nothing pushes it along the slope by itself — the only reason it tends to slide is the along-slope component of the weight.",
+          "marks": [
+            "Weight drawn vertically downward",
+            "Normal force perpendicular to the ramp surface, and friction along the surface"
+          ]
+        },
+        "b": {
+          "model": "The weight is `w = mg = 6.0 × 9.80 = 58.8 N`. With x down the slope and y perpendicular to the surface: along the slope `w sin 28° = 58.8 × 0.469 = 27.6 N`; perpendicular `w cos 28° = 58.8 × 0.883 = 51.9 N`, directed into the surface. Check: `√(27.6² + 51.9²) = 58.8 N` ✓.",
+          "marks": [
+            "Weight 58.8 N",
+            "Along-slope component 27.6 N",
+            "Perpendicular component 51.9 N directed into the surface"
+          ]
+        },
+        "c": {
+          "model": "The weight is vertical, and the perpendicular to the ramp is tilted from the vertical by exactly the ramp angle, 28°. So the angle **between the weight and the y-axis** is 28°, which makes the y-component the cosine one and the along-slope component the sine one. The rule from §1.8 applies unchanged: the component across the given angle carries the sine.",
+          "marks": [
+            "Angle between the weight and the tilted y-axis identified as the ramp angle 28°",
+            "Sine assigned to the component across that angle, cosine to the component along it"
+          ]
+        },
+        "d": {
+          "model": "With horizontal and vertical axes the weight needs no resolving, but the **normal force and the friction force both do**, since neither is horizontal or vertical any more. Worse, the acceleration points along the slope, so it acquires two components as well, and you end up with two coupled equations instead of one plus a simple perpendicular balance. Same physics, roughly three times the algebra and three times the chances of a sign error.",
+          "marks": [
+            "Normal force and friction identified as the forces that would need resolving",
+            "Acceleration also acquiring two components, making the algebra longer"
+          ]
+        }
+      }
+    },
+    "C6": {
+      "review": "1.10",
+      "parts": {
+        "a": {
+          "model": "Add the components separately along each axis: x: `50 + 0 − 30 = 20`; y: `0 + 80 − 20 = 60`; z: `0 + 25 + 15 = 40`. So the resultant displacement is `R = 20î + 60ĵ + 40k̂ m`.",
+          "marks": [
+            "Components added separately along each axis",
+            "Resultant 20î + 60ĵ + 40k̂ m"
+          ]
+        },
+        "b": {
+          "model": "The magnitude is `R = √(20² + 60² + 40²) = √(400 + 3600 + 1600) = √5600 = 74.8 m`, built from the three components. The height above take-off is the z-component alone: **40 m**.",
+          "marks": [
+            "Magnitude 74.8 m from the three components",
+            "Height 40 m identified as the z-component"
+          ]
+        },
+        "c": {
+          "model": "Each leg's length: `|d₁| = 50.0 m`, `|d₂| = √(80² + 25²) = 83.8 m`, `|d₃| = √(30² + 20² + 15²) = 39.1 m`. Total path length `= 50.0 + 83.8 + 39.1 = 172.9 m`, well over twice the 74.8 m displacement. Distance adds the length of every leg regardless of direction, while displacement lets opposite directions cancel — the −30î of the third leg undoes part of the first.",
+          "marks": [
+            "Each leg's length computed: 50.0 m, 83.8 m and 39.1 m",
+            "Total distance 172.9 m",
+            "Excess explained by cancellation between legs pointing in opposing directions"
+          ]
+        },
+        "d": {
+          "model": "Divide the resultant by its magnitude: `R̂ = (20î + 60ĵ + 40k̂)/74.8 = 0.267î + 0.802ĵ + 0.535k̂`. Check: `√(0.267² + 0.802² + 0.535²) = √(0.0713 + 0.643 + 0.286) = √1.000 = 1.00` ✓, and the unit vector carries no units — its only job is to point.",
+          "marks": [
+            "Each component divided by the magnitude 74.8 m",
+            "Unit vector 0.267î + 0.802ĵ + 0.535k̂",
+            "Verification that its magnitude is 1 and that it is dimensionless"
+          ]
+        }
+      }
+    }
+  }
+}
