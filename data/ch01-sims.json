@@ -1,0 +1,76 @@
+{
+  "module": "ch01",
+  "sims": [
+    {
+      "id": "vectors-components",
+      "module": "ch01",
+      "title": "Components, and why the resultant is not the sum",
+      "type": "vectors",
+      "review": "1.9",
+      "intro": "Move the sliders. The dashed lines are the components of A — signed numbers, not vectors — and the red arrow is the resultant you would get by adding components separately, which is the only method that works.",
+      "params": [
+        {
+          "key": "A",
+          "label": "magnitude of A",
+          "min": 0,
+          "max": 10,
+          "step": 0.5,
+          "value": 5,
+          "unit": ""
+        },
+        {
+          "key": "thetaA",
+          "label": "direction of A",
+          "min": 0,
+          "max": 360,
+          "step": 1,
+          "value": 37,
+          "unit": "°"
+        },
+        {
+          "key": "B",
+          "label": "magnitude of B",
+          "min": 0,
+          "max": 10,
+          "step": 0.5,
+          "value": 6,
+          "unit": ""
+        },
+        {
+          "key": "thetaB",
+          "label": "direction of B",
+          "min": 0,
+          "max": 360,
+          "step": 1,
+          "value": 143,
+          "unit": "°"
+        }
+      ],
+      "watch": [
+        "Aₓ goes negative the moment A passes 90°, while |A| never does. That is the whole difference between a component and a magnitude.",
+        "Set both directions equal: only then does |R| equal A + B. Every other angle gives less, which is why magnitudes cannot be added.",
+        "Make the two antiparallel and watch |R| fall to |A − B| — the smallest resultant two vectors can have."
+      ],
+      "challenges": [
+        {
+          "prompt": "Set A's direction so that its x-component is zero while its magnitude stays 5.",
+          "check": {
+            "param": "thetaA",
+            "target": 90,
+            "tol": 2
+          },
+          "explain": "At 90° the vector points straight up the y-axis: cos 90° = 0, so Aₓ = 0 and Aᵧ = A. A component can vanish while the vector itself is as long as ever."
+        },
+        {
+          "prompt": "Point B at 217° and read |R|. Then check the direction the calculator would have given you from arctan alone.",
+          "check": {
+            "param": "thetaB",
+            "target": 217,
+            "tol": 2
+          },
+          "explain": "With both resultant components negative the true direction is in the third quadrant, but arctan(Rᵧ/Rₓ) reports an angle in the first. Adding 180° is the fix, and the picture is what tells you to."
+        }
+      ]
+    }
+  ]
+}

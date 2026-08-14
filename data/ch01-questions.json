@@ -8,10 +8,10 @@
       "topic": "Vector components",
       "stem": "A 40 N force acts on a crate. The angle θ is measured between the force and the **+y-axis**. Which pair gives the force's components?",
       "options": {
-        "a": "x: 40 sin θ, y: 40 cos θ",
-        "b": "x: 40 cos θ, y: 40 sin θ",
+        "a": "x: 40 cos θ, y: 40 tan θ",
+        "b": "x: 40 sin θ, y: 40 cos θ",
         "c": "x: 40 tan θ, y: 40 sin θ",
-        "d": "x: 40 cos θ, y: 40 tan θ"
+        "d": "x: 40 cos θ, y: 40 sin θ"
       }
     },
     {
@@ -20,9 +20,9 @@
       "stem": "Two forces, of magnitudes 6.0 N and 8.0 N, act at the same point. The angle between them is not given. Which value of the resultant's magnitude is **impossible**?",
       "options": {
         "a": "2.0 N",
-        "b": "15.0 N",
-        "c": "10.0 N",
-        "d": "14.0 N"
+        "b": "14.0 N",
+        "c": "15.0 N",
+        "d": "10.0 N"
       }
     },
     {
@@ -42,8 +42,8 @@
       "stem": "A vector has `Aₓ = −5.0 m` and `Aᵧ = +5.0 m`. A calculator returns `arctan(Aᵧ/Aₓ) = −45°`. Measured counterclockwise from the +x-axis, the vector's direction is",
       "options": {
         "a": "−45°",
-        "b": "225°",
-        "c": "135°",
+        "b": "135°",
+        "c": "225°",
         "d": "315°"
       }
     },
@@ -53,9 +53,9 @@
       "stem": "A capacitor plate has an area of 2000 cm². Expressed in SI base units, that area is",
       "options": {
         "a": "2.0 m²",
-        "b": "0.20 m²",
+        "b": "0.020 m²",
         "c": "20 m²",
-        "d": "0.020 m²"
+        "d": "0.20 m²"
       }
     },
     {
@@ -74,9 +74,9 @@
       "topic": "Dimensional analysis",
       "stem": "In the expressions below *v* is a speed, *x* a distance and *t* a time. Which one **cannot** represent an acceleration?",
       "options": {
-        "a": "v²/x",
+        "a": "v t/x",
         "b": "x/t²",
-        "c": "v t/x",
+        "c": "v²/x",
         "d": "v/t"
       }
     },
@@ -85,10 +85,10 @@
       "topic": "Dot and cross products",
       "stem": "Two non-zero vectors satisfy `A × B = 0`. This tells you that the two vectors are",
       "options": {
-        "a": "perpendicular to each other",
+        "a": "both in the xy-plane",
         "b": "equal in magnitude",
-        "c": "both in the xy-plane",
-        "d": "parallel or antiparallel"
+        "c": "parallel or antiparallel",
+        "d": "perpendicular to each other"
       }
     }
   ],

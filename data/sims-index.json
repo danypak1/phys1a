@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vectors-components",
+    "module": "ch01",
+    "title": "Components, and why the resultant is not the sum",
+    "free": true
+  },
+  {
+    "id": "projectile-range",
+    "module": "ch03",
+    "title": "Projectile: what the launch angle actually does",
+    "free": false
+  },
+  {
+    "id": "incline-friction",
+    "module": "ch05",
+    "title": "The incline: when does it slide, and which function goes where",
+    "free": false
+  },
+  {
+    "id": "work-as-area",
+    "module": "ch06",
+    "title": "Work is an area, and it can be negative",
+    "free": false
+  },
+  {
+    "id": "two-charges-field",
+    "module": "ch11",
+    "title": "Two charges: where the field cancels, and where it never can",
+    "free": false
+  },
+  {
+    "id": "rc-time-constant",
+    "module": "ch16",
+    "title": "The R–C circuit: what τ actually means",
+    "free": false
+  }
+]

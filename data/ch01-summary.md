@@ -8,15 +8,15 @@
 
 | Formula | What it is, and when |
 |---|---|
-| Aₓ = A cos θ, Aᵧ = A sin θ | Components — only if θ is from **+x**, counterclockwise |
+| Aₓ = A cos θ, Aᵧ = A sin θ | Components — θ from **+x**, counterclockwise |
 | A = √(Aₓ² + Aᵧ²) | Magnitude from components; add `A_z²` in 3D |
 | tan θ = Aᵧ / Aₓ | Direction from components; add 180° if `Aₓ < 0` |
 | A = Aₓ î + Aᵧ ĵ + A_z k̂ | Unit-vector form — asked for by name in exams |
-| Rₓ = Aₓ + Bₓ, Rᵧ = Aᵧ + Bᵧ | Vector addition; never add magnitudes |
-| A · B = AB cos φ | Dot product, φ tail to tail; its sign is the sign of work |
-| A · B = AₓBₓ + AᵧBᵧ + A_zB_z | Dot product from components; equate both to get φ |
+| Rₓ = Aₓ + Bₓ, Rᵧ = Aᵧ + Bᵧ | Add componentwise; never add magnitudes |
+| A · B = AB cos φ | Dot product, φ tail to tail; its sign = sign of work |
+| A · B = AₓBₓ + AᵧBᵧ + A_zB_z | From components; equate both forms for φ |
 | \|A × B\| = AB sin φ | Cross product size; direction by right-hand rule |
-| Cₓ = AᵧB_z − A_zBᵧ (cyclic) | Cross product components, cycling x → y → z → x |
+| Cₓ = AᵧB_z − A_zBᵧ (cyclic) | Cross product components, cycling x → y → z |
 
 ## Units
 

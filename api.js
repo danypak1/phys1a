@@ -319,6 +319,36 @@ const Api = {
      open side of the split, not behind the Worker. */
   getDoc(name) { return this._text(`data/${name}.md`); },
 
+  /* The trainer catalogue: id, module and title for every trainer in the course,
+     generated at publish time. Public on purpose — a visitor should be able to
+     see what they would be buying — while what each trainer teaches comes from
+     the module's own config, which is paid. */
+  getSimsIndex() { return this._json("data/sims-index.json"); },
+
+  /* A module's trainer configs. Free module: straight off disk, like its notes.
+     Paid: through the Worker under the same token, and cached for the session
+     for the same reason the notes are — a student flips between trainers. */
+  getSims(moduleId) {
+    if (this.isFree(moduleId)) return this._json(`data/${moduleId}-sims.json`);
+    return this._fetchSims(moduleId);
+  },
+
+  /* Its own cache and its own request rather than riding on _fetchContent: that
+     one asks for notes+questions+summary together because the module screen
+     needs all three, and a student who only opens a trainer should not pay for
+     the chapter's prose to be sent as well. One budget unit, cached per session
+     like everything else the buyer already fetched. */
+  _sims: {},
+  _fetchSims(moduleId) {
+    let held = this._sims[moduleId];
+    if (!held) {
+      held = this._sims[moduleId] = this._post("/content", { module: moduleId, parts: ["sims"] })
+        .then(d => d.sims);
+      held.catch(() => { delete this._sims[moduleId]; });
+    }
+    return held;
+  },
+
   /* The whole module key straight off disk. Shipped only for the free module (and
      for every module in local development), which is why isFree gates it. */
   _localAnswers(moduleId) { return this._json(`data/${moduleId}-answers.json`); },
@@ -368,7 +398,13 @@ const Keys = {
   MAX_PER_REQUEST: 64,   // the Worker rejects more than 64 *distinct* ids
                          // (it de-duplicates first); one exam paper is 48
 
-  storeKey: "lhs-keys",
+  /* Namespaced like every other key here. This one was missed when the rest
+     were: two courses on one GitHub Pages account share an origin, every course
+     has a ch05, and the cache is keyed by question id — so a buyer of both was
+     served the other course's answer for "ch05:A1" and never re-fetched it,
+     because ensure() skips ids the cache already has. For the course this kit
+     came from the id is "lhs", so the key is unchanged. */
+  storeKey: `${COURSE_ID}-keys`,
   MAX_STORED: 400,       // ~216 MCQ plus room for a couple of exam papers
 
   has(qid) { return Object.prototype.hasOwnProperty.call(this._by, qid); },

@@ -14,49 +14,49 @@ const MODULES = [
   { id: "ch01", num: "01", title: "Units, Vectors and the Language of Physics", ready: true, sections: 13,
     blurb: `The toolkit every later chapter assumes you already own: SI units and the dimensional check that catches a wrong formula before the arithmetic does, significant figures, and vectors — components, unit vectors, and the two products that keep reappearing as work and as torque.`,
     topics: ["SI units and dimensional analysis", "Significant figures", "Vector components", "Unit vectors", "Dot product", "Cross product"] },
-  { id: "ch02", num: "02", title: "Kinematics in One Dimension", ready: false, sections: 0,
+  { id: "ch02", num: "02", title: "Kinematics in One Dimension", ready: true, sections: 12,
     blurb: `Motion along a line, described four ways that must agree: words, graphs, calculus and the constant-acceleration formulas. Includes free fall and the case the formulas do not cover — acceleration that changes with time, handled by integration.`,
     topics: ["Displacement and velocity", "Instantaneous acceleration", "Motion graphs", "Constant-acceleration equations", "Free fall", "Velocity and position by integration"] },
-  { id: "ch03", num: "03", title: "Motion in Two and Three Dimensions", ready: false, sections: 0,
+  { id: "ch03", num: "03", title: "Motion in Two and Three Dimensions", ready: true, sections: 11,
     blurb: `The same kinematics as vectors, and the three standard situations it produces: projectiles, circular motion, and motion seen from a moving frame. The idea that carries all three is that acceleration splits into a part that changes speed and a part that changes direction.`,
     topics: ["Position and velocity vectors", "Parallel and perpendicular acceleration", "Projectile motion", "Uniform circular motion", "Nonuniform circular motion", "Relative velocity"] },
-  { id: "ch04", num: "04", title: "Newton's Laws of Motion", ready: false, sections: 0,
+  { id: "ch04", num: "04", title: "Newton's Laws of Motion", ready: true, sections: 10,
     blurb: `Why things accelerate. The four contact and field forces you will meet all term, the three laws, the frames in which they hold — and the free-body diagram, which is where most exam marks are actually won or lost.`,
     topics: ["Types of force", "Superposition of forces", "Newton's first law and inertial frames", "Newton's second law", "Mass versus weight", "Newton's third law", "Free-body diagrams"] },
-  { id: "ch05", num: "05", title: "Applying Newton's Laws", ready: false, sections: 0,
+  { id: "ch05", num: "05", title: "Applying Newton's Laws", ready: true, sections: 12,
     blurb: `The laws turned into a procedure: equilibrium and accelerating systems, connected bodies and pulleys, friction as two different laws with the same symbol, and circular motion treated as a force problem rather than a special case.`,
     topics: ["Particles in equilibrium", "Connected bodies and pulleys", "Static and kinetic friction", "Rolling friction and drag", "Dynamics of circular motion", "Banked curves and the conical pendulum"] },
-  { id: "ch06", num: "06", title: "Work and Kinetic Energy", ready: false, sections: 0,
+  { id: "ch06", num: "06", title: "Work and Kinetic Energy", ready: true, sections: 10,
     blurb: `The first accounting method that gets answers Newton's laws alone cannot: work as a dot product (so it can be negative or zero), the work–energy theorem, forces that vary such as a spring, and power as the rate of the whole business.`,
     topics: ["Work by a constant force", "Negative and zero work", "Kinetic energy and the work–energy theorem", "Work by a varying force", "Springs and Hooke's law", "Work along a curved path", "Power"] },
-  { id: "ch07", num: "07", title: "Potential Energy and Energy Conservation", ready: false, sections: 0,
+  { id: "ch07", num: "07", title: "Potential Energy and Energy Conservation", ready: true, sections: 11,
     blurb: `Bookkeeping instead of forces: gravitational and elastic potential energy, what makes a force conservative, where the energy goes when it is not, and how to read a whole motion off a U(x) curve without solving anything.`,
     topics: ["Gravitational potential energy", "Elastic potential energy", "Conservative and nonconservative forces", "Conservation of energy with friction", "Force from a potential", "Energy diagrams"] },
-  { id: "ch08", num: "08", title: "Momentum, Impulse and Collisions", ready: false, sections: 0,
+  { id: "ch08", num: "08", title: "Momentum, Impulse and Collisions", ready: true, sections: 11,
     blurb: `The conserved quantity that survives a collision when kinetic energy does not. Impulse and the area under a force–time curve, the three classes of collision and what each conserves, and the centre of mass that moves as if none of it happened.`,
     topics: ["Momentum and impulse", "Conservation of momentum", "Elastic collisions", "Inelastic and completely inelastic collisions", "Collisions in two dimensions", "Centre of mass"] },
-  { id: "ch09", num: "09", title: "Rotation of Rigid Bodies", ready: false, sections: 0,
+  { id: "ch09", num: "09", title: "Rotation of Rigid Bodies", ready: true, sections: 13,
     blurb: `Every kinematic result again, with angles: the constant-angular-acceleration equations, the bridge between v and ω, and the quantity that decides how hard a body is to spin — moment of inertia, by table, by parallel-axis theorem and by integration.`,
     topics: ["Angular velocity and acceleration", "Constant angular acceleration", "Linear and angular kinematics", "Rotational kinetic energy", "Moment of inertia", "Parallel-axis theorem"] },
-  { id: "ch10", num: "10", title: "Dynamics of Rotational Motion", ready: false, sections: 0,
+  { id: "ch10", num: "10", title: "Dynamics of Rotational Motion", ready: true, sections: 12,
     blurb: `Torque as the rotational force, rolling without slipping as translation and rotation at once, and angular momentum with the conservation law that explains the spinning skater. Includes rigid-body equilibrium, which the midterm asks for and the lectures never isolate.`,
     topics: ["Torque", "Torque and angular acceleration", "Rolling without slipping", "Work and power in rotation", "Angular momentum", "Conservation of angular momentum", "Rigid-body equilibrium"] },
-  { id: "ch11", num: "11", title: "Electric Charge and Electric Field", ready: false, sections: 0,
+  { id: "ch11", num: "11", title: "Electric Charge and Electric Field", ready: true, sections: 12,
     blurb: `Electromagnetism from the charge up: Coulomb's law and superposition, the field as the thing charge leaves behind, the standard continuous distributions worked by integration — line, ring, disk — and the dipole in a uniform field.`,
     topics: ["Electric charge and conductors", "Coulomb's law", "Superposition of forces", "Electric field of point charges", "Continuous charge distributions", "Field lines", "Electric dipoles"] },
-  { id: "ch12", num: "12", title: "Gauss's Law", ready: false, sections: 0,
+  { id: "ch12", num: "12", title: "Gauss's Law", ready: true, sections: 12,
     blurb: `The shortcut that replaces a page of integration with a symmetry argument: flux, Gauss's law, choosing the surface that makes E come outside the integral, and what the law forces to be true of charge on a conductor and inside its cavities.`,
     topics: ["Electric flux", "Gauss's law", "Choosing a Gaussian surface", "Fields of sphere, line and sheet", "Charges on conductors", "Conductors with cavities"] },
-  { id: "ch13", num: "13", title: "Electric Potential", ready: false, sections: 0,
+  { id: "ch13", num: "13", title: "Electric Potential", ready: true, sections: 11,
     blurb: `Energy methods applied to charge: potential energy of a set of charges, potential as energy per unit charge, potential from a distribution, and the gradient relation that recovers the field from V — often the easiest route to E.`,
     topics: ["Electric potential energy", "Potential of point charges", "Potential of continuous distributions", "Equipotential surfaces", "Potential gradient", "Conductors and potential"] },
-  { id: "ch14", num: "14", title: "Capacitance and Dielectrics", ready: false, sections: 0,
+  { id: "ch14", num: "14", title: "Capacitance and Dielectrics", ready: true, sections: 12,
     blurb: `Storing charge and the energy that comes with it: capacitance of the three standard geometries, networks in series and parallel, energy density in the field itself, and what a dielectric changes — which depends entirely on whether the battery is still connected.`,
     topics: ["Capacitance", "Parallel-plate, spherical and cylindrical capacitors", "Capacitors in series and parallel", "Energy and energy density", "Dielectrics and induced charge", "Dielectric strength"] },
-  { id: "ch15", num: "15", title: "Current, Resistance and Electromotive Force", ready: false, sections: 0,
+  { id: "ch15", num: "15", title: "Current, Resistance and Electromotive Force", ready: true, sections: 11,
     blurb: `Charge on the move: current and the surprisingly slow drift speed behind it, resistivity and its temperature dependence, and the source with internal resistance — which is why a battery's terminal voltage is not its emf.`,
     topics: ["Current and current density", "Drift velocity", "Resistivity and temperature", "Resistance and Ohm's law", "Electromotive force and internal resistance", "Energy and power in circuits"] },
-  { id: "ch16", num: "16", title: "Direct-Current Circuits", ready: false, sections: 0,
+  { id: "ch16", num: "16", title: "Direct-Current Circuits", ready: true, sections: 13,
     blurb: `Networks that series-and-parallel cannot reduce, solved with Kirchhoff's two rules and a consistent sign convention; the instruments that measure them without disturbing them; and the R–C circuit, the one DC circuit in which nothing is constant.`,
     topics: ["Resistors in series and parallel", "Kirchhoff's rules", "Sign conventions", "Ammeters, voltmeters and bridges", "R–C circuits", "Time constant"] },
 ];
@@ -76,6 +76,7 @@ const MODULES = [
                  document. Not every course does; the tile is hidden when it does
                  not, rather than offering a page that cannot load. */
 const COURSE_TITLE = "College Physics IA";
+const COURSE_SUBTITLE = "Mechanics & Electromagnetism";
 const KEY_PREFIX = "PHYS";
 const PER_MODULE = { mcq: 8, short: 10, extended: 6 };
 const EXAM_PER_MODULE = 2;
@@ -254,6 +255,7 @@ function routeTo() {
   if (mod === "review") return renderReview();
   if (mod === "exam") return renderExam();
   if (mod === "signals") return renderSignals();
+  if (mod === "sims") return renderSims(tab);
   if (!mod) return renderHome();
   const m = MODULES.find(x => x.id === mod);
   if (!m || !m.ready) return renderHome();
@@ -407,7 +409,7 @@ function renderHome() {
   document.title = `${COURSE_TITLE} — Interactive`;
   main.innerHTML = `
     <div class="page">
-      <h1 class="page-title">Life &amp; Health Science</h1>
+      <h1 class="page-title">${COURSE_SUBTITLE}</h1>
       <p class="page-sub">The full course, taught from zero. Read the notes, then test yourself —
       every wrong answer tells you exactly which misunderstanding it reveals and what to re-read.</p>
       ${freeModuleCard()}
@@ -484,6 +486,11 @@ function courseTools() {
         <span class="tool-sub">${n} question${n > 1 ? "s" : ""} you missed or flagged,
           gathered from every module.</span>
       </a>` : ""}
+      <a class="tool-card" href="#/sims">
+        <span class="tool-title">Interactive trainers</span>
+        <span class="tool-sub">Move a slider and watch the formula do it —
+          the ideas that are easier to feel than to read.</span>
+      </a>
       ${HAS_SIGNALS ? `<a class="tool-card" href="#/signals">
         <span class="tool-title">Questions the course has already graded</span>
         <span class="tool-sub">The items the lectures put on screen with marks
@@ -1159,6 +1166,100 @@ async function renderReview() {
       back: `<a class="btn secondary" href="#/">Back to modules</a>`,
     }),
   });
+}
+
+/* ---------- interactive trainers (#/sims and #/sims/<id>) ----------
+ *
+ * The catalogue is public: a visitor sees every trainer's name and which chapter
+ * it belongs to, because that is the shop window. Opening one needs the module
+ * it belongs to — free module free, everything else behind the key, exactly like
+ * the notes. The engine lives in sims.js and holds no course content.
+ */
+let simTeardown = null;
+
+async function renderSims(simId) {
+  document.title = `Trainers — ${COURSE_TITLE}`;
+  PageScroll.clear();
+  // A trainer owns a ResizeObserver; leaving it attached after the route changes
+  // is how a single-page app quietly accumulates work per navigation.
+  if (simTeardown) { simTeardown(); simTeardown = null; }
+
+  main.innerHTML = `
+    <div class="page">
+      <div class="crumbs"><a href="#/">Modules</a> / Trainers${
+        simId ? ` / <a href="#/sims">catalogue</a>` : ""}</div>
+      <h1 class="page-title">Interactive trainers</h1>
+      <p class="page-sub">Every idea in this course that is easier to feel than to read:
+        move a slider, watch what the formula does. Each trainer opens with the chapter
+        it belongs to.</p>
+      <div id="tab-body"></div>
+    </div>`;
+  const body = $("#tab-body");
+  body.innerHTML = `<div class="card"><p class="muted">Loading…</p></div>`;
+
+  let index;
+  try {
+    index = await Api.getSimsIndex();
+  } catch (e) {
+    body.innerHTML = `<div class="card"><h3>Could not load the trainers</h3>
+      <p class="muted">${e.message}</p></div>`;
+    return;
+  }
+
+  if (!simId) return renderSimCatalogue(body, index);
+
+  const row = index.find(r => r.id === simId);
+  if (!row) { body.innerHTML = `<div class="card"><h3>No such trainer</h3></div>`; return; }
+  if (needsKey(row.module)) {
+    body.innerHTML = `<div class="card lock-card">
+      <div class="lock-icon" aria-hidden="true">🔒</div>
+      <h3>${escapeAttr(row.title)}</h3>
+      <p class="muted lock-what">This trainer belongs to Module ${
+        MODULES.find(m => m.id === row.module)?.num || row.module}. ${WHAT_A_KEY_BUYS}</p>
+      <div class="row-gap">${buyButton()}
+        <a class="btn secondary" href="#/sims">Back to the trainers</a></div>
+    </div>`;
+    return;
+  }
+
+  body.innerHTML = `<div class="card"><p class="muted">Loading the trainer…</p></div>`;
+  let pack;
+  try {
+    pack = await Api.getSims(row.module);
+  } catch (e) {
+    body.innerHTML = `<div class="card"><h3>Could not load this trainer</h3>
+      <p class="muted">${e.message}</p></div>`;
+    return;
+  }
+  const sim = (pack?.sims || []).find(s => s.id === simId);
+  if (!sim) {
+    body.innerHTML = `<div class="card"><h3>That trainer is not in this module yet</h3></div>`;
+    return;
+  }
+  body.innerHTML = `<div id="sim-host"></div>
+    <div class="row-gap"><a class="btn secondary" href="#/sims">All trainers</a></div>`;
+  simTeardown = SIMS.render($("#sim-host", body), sim);
+  // "Re-read §3.6" has to land on the section, the same deep link the quiz uses.
+  main.querySelectorAll("#sim-host a[data-review]").forEach(a => a.addEventListener("click", () =>
+    sessionStorage.setItem(`${Api.courseId}-scroll`, "sec-" + a.dataset.review.replace(".", "-"))));
+}
+
+function renderSimCatalogue(body, index) {
+  const byModule = MODULES.filter(m => index.some(r => r.module === m.id));
+  body.innerHTML = byModule.map(m => {
+    const rows = index.filter(r => r.module === m.id);
+    return `<div class="card sim-group">
+      <div class="card-head">
+        <h3>Module ${m.num} · ${escapeAttr(m.title)}</h3>
+        ${needsKey(m.id) ? `<span class="pill">needs a key</span>`
+                         : `<span class="pill done">open</span>`}
+      </div>
+      <ul class="sim-list">${rows.map(r => `<li>
+        <a href="#/sims/${encodeURIComponent(r.id)}">${escapeAttr(r.title)}</a>
+        ${needsKey(m.id) ? `<span class="nav-lock" aria-hidden="true">🔒</span>` : ""}
+      </li>`).join("")}</ul>
+    </div>`;
+  }).join("") || `<div class="card"><p class="muted">No trainers yet.</p></div>`;
 }
 
 /* ---------- graded lecture questions (#/signals) ---------- */
