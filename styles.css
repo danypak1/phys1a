@@ -339,6 +339,57 @@ body { -webkit-tap-highlight-color: transparent; }
    the offer, so the padlock marks them without hiding them. */
 .nav-item .nav-lock { flex-shrink: 0; font-size: 11px; opacity: 0.65; }
 
+/* Course-wide tools, pinned between the scrolling module list and the theme
+   toggle. #module-nav is the flex child that grows, so these rows never scroll
+   out of reach however long the module list gets. */
+.tool-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.tool-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+.tool-link:hover { background: var(--bg); color: var(--ink); }
+.tool-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.tool-link .tool-ico {
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+  font-size: 13px;
+  opacity: .85;
+}
+.tool-link .tool-link-label { flex: 1; min-width: 0; }
+
+/* The trainer belonging to the module on screen, offered beside its tabs. */
+.trainer-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
+.trainer-row:empty { display: none; }
+.trainer-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.trainer-chip:hover { border-color: var(--accent); }
+
 .theme-toggle {
   margin-top: auto;
   display: flex;

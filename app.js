@@ -38,7 +38,7 @@ const MODULES = [
   { id: "ch09", num: "09", title: "Rotation of Rigid Bodies", ready: true, sections: 13,
     blurb: `Every kinematic result again, with angles: the constant-angular-acceleration equations, the bridge between v and ω, and the quantity that decides how hard a body is to spin — moment of inertia, by table, by parallel-axis theorem and by integration.`,
     topics: ["Angular velocity and acceleration", "Constant angular acceleration", "Linear and angular kinematics", "Rotational kinetic energy", "Moment of inertia", "Parallel-axis theorem"] },
-  { id: "ch10", num: "10", title: "Dynamics of Rotational Motion", ready: true, sections: 12,
+  { id: "ch10", num: "10", title: "Dynamics of Rotational Motion", ready: true, sections: 14,
     blurb: `Torque as the rotational force, rolling without slipping as translation and rotation at once, and angular momentum with the conservation law that explains the spinning skater. Includes rigid-body equilibrium, which the midterm asks for and the lectures never isolate.`,
     topics: ["Torque", "Torque and angular acceleration", "Rolling without slipping", "Work and power in rotation", "Angular momentum", "Conservation of angular momentum", "Rigid-body equilibrium"] },
   { id: "ch11", num: "11", title: "Electric Charge and Electric Field", ready: true, sections: 12,
@@ -358,8 +358,49 @@ function renderNav(activeId) {
   }).join("");
 
   renderCourseProgress();
+  renderToolNav(activeId);
   const m = MODULES.find(x => x.id === activeId);
   $("#topbar-title").textContent = m ? `${m.num} · ${m.title}` : COURSE_TITLE;
+}
+
+/* Everything that works across the whole course rather than inside one module.
+ * The home screen shows the same set as cards and this renders it as sidebar
+ * rows; both read this one list, so the two can never drift apart. The keys match
+ * the first hash segment, which is what `routeTo` already hands to renderNav. */
+function toolLinks() {
+  const n = mistakeIds().length;
+  return [
+    { key: "sims", href: "#/sims", icon: "◎", label: "Trainers" },
+    { key: "exam", href: "#/exam", icon: "▤", label: "Mock exam" },
+    ...(n ? [{ key: "review", href: "#/review", icon: "↺", label: "Your mistakes", stat: n }] : []),
+    ...(HAS_SIGNALS ? [{ key: "signals", href: "#/signals", icon: "✦", label: "Graded questions" }] : []),
+  ];
+}
+
+function renderToolNav(activeId) {
+  const nav = $("#tool-nav");
+  if (!nav) return;
+  nav.innerHTML = toolLinks().map(t => {
+    const active = t.key === activeId;
+    return `<a class="tool-link${active ? " active" : ""}" href="${t.href}"${
+      active ? ` aria-current="page"` : ""}>
+      <span class="tool-ico" aria-hidden="true">${t.icon}</span>
+      <span class="tool-link-label">${t.label}</span>
+      ${t.stat ? `<span class="nav-stat">${t.stat}</span>` : ""}
+    </a>`;
+  }).join("");
+}
+
+/* The trainers index is a small public file that three screens now want, so it is
+ * fetched once per page load instead of once per visit. A failure is not cached:
+ * a student who was offline for one navigation would otherwise see no trainers
+ * for the rest of the session. */
+let simsIndexOnce = null;
+function simsIndex() {
+  if (!simsIndexOnce) {
+    simsIndexOnce = Api.getSimsIndex().catch(e => { simsIndexOnce = null; throw e; });
+  }
+  return simsIndexOnce;
 }
 
 const MCQ_PER_MODULE = PER_MODULE.mcq; // the validator enforces this many per module
@@ -557,12 +598,29 @@ async function renderModule(m, tab) {
         </div>
         <div class="read-progress"><span id="read-fill"></span></div>
       </div>
+      <div id="module-trainers" class="trainer-row"></div>
       <div id="tab-body"></div>
     </div>`;
 
   main.querySelectorAll(".tab").forEach(b =>
     b.addEventListener("click", () => go(`#/${m.id}/${b.dataset.tab}`)));
   syncStickyOffsets();
+
+  /* A module that owns a trainer says so beside its own tabs. The catalogue is a
+     detour for the student who needs it: the one who wants the incline trainer is
+     the one currently reading the incline section. Fire-and-forget — a trainer is
+     an extra, and no failure here may take the notes down with it. */
+  simsIndex().then(index => {
+    if (!alive()) return;
+    const rows = (index || []).filter(r => r.module === m.id);
+    const slot = $("#module-trainers");
+    if (!slot || !rows.length) return;
+    slot.innerHTML = rows.map(r =>
+      `<a class="trainer-chip" href="#/sims/${encodeURIComponent(r.id)}">
+        <span aria-hidden="true">◎</span>
+        <span>Trainer — ${escapeAttr(r.title)}</span>
+      </a>`).join("");
+  }).catch(() => {});
 
   const body = $("#tab-body");
   try {
@@ -1199,7 +1257,7 @@ async function renderSims(simId) {
 
   let index;
   try {
-    index = await Api.getSimsIndex();
+    index = await simsIndex();
   } catch (e) {
     body.innerHTML = `<div class="card"><h3>Could not load the trainers</h3>
       <p class="muted">${e.message}</p></div>`;

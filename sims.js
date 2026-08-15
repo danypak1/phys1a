@@ -167,13 +167,21 @@ const SIMS = (() => {
       const cx = v.X(bx), cy = v.Y(by) - 16;
       arrow(ctx, cx, cy, cx, cy + w * sc, css("--red"));
       label(ctx, "w = mg", cx + 6, cy + w * sc + 10, css("--red"), "left", 11);
-      arrow(ctx, cx, cy, cx + perp * sc * Math.sin(th), cy - perp * sc * Math.cos(th), css("--green"));
-      label(ctx, "n", cx + perp * sc * Math.sin(th) + 6, cy - perp * sc * Math.cos(th), css("--green"), "left", 11);
-      const fdir = slides ? -1 : -1;
+      // The normal is perpendicular to the SLOPE, not to the ground, so it leans
+      // off vertical by θ towards the UPHILL side: world (−sin θ, cos θ), which
+      // is (−sin θ, −cos θ) in pixels because Y runs downwards. Leaning it the
+      // other way draws the one picture this trainer exists to correct.
+      const nx = cx - perp * sc * Math.sin(th), ny = cy - perp * sc * Math.cos(th);
+      arrow(ctx, cx, cy, nx, ny, css("--green"));
+      label(ctx, "n", nx - 6, ny - 4, css("--green"), "right", 11);
+      // Friction opposes the block's tendency to slide, and here that tendency is
+      // down the slope in both cases — static and holding, or kinetic and merely
+      // slowing the slide. So the arrow points UP the slope either way:
+      // world (cos θ, sin θ) → pixels (cos θ, −sin θ).
       const fmag = slides ? fmax : along;
-      arrow(ctx, cx, cy, cx + fdir * fmag * sc * Math.cos(th), cy + fdir * fmag * sc * Math.sin(th) * -1,
-            css("--accent"));
-      label(ctx, slides ? "fₖ (sliding)" : "fₛ (holding)", cx - 8, cy - 34, css("--accent"), "right", 11);
+      const fx = cx + fmag * sc * Math.cos(th), fy = cy - fmag * sc * Math.sin(th);
+      arrow(ctx, cx, cy, fx, fy, css("--accent"));
+      label(ctx, slides ? "fₖ (sliding)" : "fₛ (holding)", fx + 6, fy - 10, css("--accent"), "left", 11);
       return [
         ["w = mg", `${fmt(w, 1)} N`],
         ["along slope", `${fmt(along, 1)} N`],
