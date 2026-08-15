@@ -37,7 +37,7 @@ const COURSE_ID = "phys1a";
 const Api = {
   courseId: COURSE_ID,
   mode: "remote", // "local" reads ./data/ including the key — development only
-  base: "https://phys1a-api.danypak.workers.dev",
+  base: "https://lhs-api.danypak.workers.dev",
                   // deployed 2026-08-11 from ../worker.
                   // (locally: "http://127.0.0.1:8788" against `wrangler dev`,
                   //  which is the `lhs-worker` entry in .claude/launch.json)
