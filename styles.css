@@ -269,7 +269,24 @@ body { -webkit-tap-highlight-color: transparent; }
   color: var(--ink);
   padding: 4px 8px;
 }
-.brand-icon { font-size: 26px; }
+/* A bare emoji floating next to the wordmark rendered however the visitor's OS
+   feels like that day — a colourful rounded-square badge on Mac, a flat
+   black-and-white glyph on Windows, something else again on Android. Giving it
+   its own chip, in the app's own tokens, means the brand mark looks the same
+   deliberate thing everywhere instead of gambling on a font neither this file
+   nor the course config controls. Same visual language as .nav-item .num. */
+.brand-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  font-size: 19px;
+  line-height: 1;
+}
 .brand strong { display: block; font-size: 15px; line-height: 1.25; }
 .brand small { display: block; color: var(--ink-faint); font-size: 12px; }
 
