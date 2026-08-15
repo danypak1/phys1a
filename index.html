@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>College Physics IA — mechanics and electromagnetism, worked out</title>
   <meta name="description" content="<!--gen:metaDescription-->Notes and exam-style problems for College Physics IA: mechanics and electromagnetism, taught from zero. Module 01 is free in full. Every problem is worked line by line with the marking points, and every wrong answer names the misunderstanding it reveals.<!--/gen-->">
-  <link rel="stylesheet" href="styles.css?v=47">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'><!--gen:icon-->⚛️<!--/gen--></text></svg>">
+  <link rel="stylesheet" href="styles.css?v=49">
+  <!-- Bespoke mark, not the kit's generic emoji-via-config icon — see course.html
+       for why. Colours are baked in since a favicon has no page stylesheet. -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%232563eb'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5' transform='rotate(60 12 12)'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5' transform='rotate(-60 12 12)'/><circle cx='12' cy='12' r='1.6' fill='white'/></svg>">
   <!-- Honour the theme the student picked inside the app. In <head> and inline so
        the page never paints the wrong theme first. -->
   <script>
@@ -159,7 +161,14 @@
   <a class="skip-link" href="#lp-main">Skip to content</a>
   <div class="lp">
     <nav class="lp-nav" aria-label="Site">
-      <span class="brand-icon"><!--gen:icon-->⚛️<!--/gen--></span>
+      <span class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <ellipse cx="12" cy="12" rx="9" ry="3.6"/>
+          <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-60 12 12)"/>
+          <circle cx="12" cy="12" r="1.6"/>
+        </svg>
+      </span>
       <strong><!--gen:title-->College Physics IA<!--/gen--></strong>
       <span class="lp-actions">
         <a class="btn secondary" href="course.html#/login">Sign in</a>

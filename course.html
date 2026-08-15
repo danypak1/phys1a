@@ -6,8 +6,14 @@
   <title>College Physics IA — Interactive</title>
   <!-- ?v= is a cache buster. BUMP IT on every deploy, or returning students keep the
        old JS/CSS and newly published modules stay invisible to them. -->
-  <link rel="stylesheet" href="styles.css?v=47">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'><!--gen:icon-->⚛️<!--/gen--></text></svg>">
+  <link rel="stylesheet" href="styles.css?v=49">
+  <!-- Bespoke mark, not the kit's generic emoji-via-config icon: Daniil found
+       the raw ⚛️ glyph itself ugly, not just its missing container, so this is
+       a hand-drawn atom (three orbits + a nucleus) instead. Colours are baked
+       in because a favicon is a standalone document with no access to the
+       page's stylesheet — same accent blue the sidebar mark uses, just fixed
+       rather than living in a CSS variable. -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%232563eb'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5' transform='rotate(60 12 12)'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5' transform='rotate(-60 12 12)'/><circle cx='12' cy='12' r='1.6' fill='white'/></svg>">
 </head>
 <body>
   <button class="skip-link" id="skip-link">Skip to content</button>
@@ -25,7 +31,14 @@
   <div class="layout">
     <aside class="sidebar" id="sidebar" aria-label="Modules">
       <a class="brand" href="#/">
-        <span class="brand-icon"><!--gen:icon-->⚛️<!--/gen--></span>
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <ellipse cx="12" cy="12" rx="9" ry="3.6"/>
+            <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/>
+            <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-60 12 12)"/>
+            <circle cx="12" cy="12" r="1.6"/>
+          </svg>
+        </span>
         <span>
           <strong><!--gen:title-->College Physics IA<!--/gen--></strong>
           <small><!--gen:subtitle-->Mechanics &amp; Electromagnetism<!--/gen--></small>
@@ -59,9 +72,9 @@
   <div class="print-credit">
     <!--gen:attribution-->Independent study guide. Problem material adapted from OpenStax University Physics Volumes 1–2 (CC BY 4.0). Not affiliated with any university.<!--/gen-->
   </div>
-  <script src="md.js?v=47"></script>
-  <script src="api.js?v=47"></script>
-  <script src="sims.js?v=47"></script>
-  <script src="app.js?v=47"></script>
+  <script src="md.js?v=49"></script>
+  <script src="api.js?v=49"></script>
+  <script src="sims.js?v=49"></script>
+  <script src="app.js?v=49"></script>
 </body>
 </html>

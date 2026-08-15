@@ -287,6 +287,16 @@ body { -webkit-tap-highlight-color: transparent; }
   font-size: 19px;
   line-height: 1;
 }
+/* A course that carries its own vector mark instead of an emoji character puts
+   it here as inline SVG. Sized and coloured through the app's own accent
+   token so it repaints with the theme instead of shipping a colour baked into
+   the markup. Selectors are element-type, not classes, on the assumption that
+   a brand glyph is simple: strokes are the linework, a filled circle is a
+   centre dot. A course with no SVG in .brand-icon (still a bare emoji) is
+   untouched — these rules match nothing there. */
+.brand-icon svg { width: 22px; height: 22px; overflow: visible; display: block; }
+.brand-icon svg ellipse, .brand-icon svg path { fill: none; stroke: var(--accent); stroke-width: 1.4; }
+.brand-icon svg circle { fill: var(--accent); }
 .brand strong { display: block; font-size: 15px; line-height: 1.25; }
 .brand small { display: block; color: var(--ink-faint); font-size: 12px; }
 
