@@ -82,8 +82,16 @@ const PER_MODULE = { mcq: 8, short: 10, extended: 6 };
 const EXAM_PER_MODULE = 2;
 const EXAM_MINUTES = 45;
 const HAS_SIGNALS = false;
+const HAS_PROBLEMS = false;
+const HAS_SIMS = true;
+const HAS_EXAM = true;
+const SURFACES = ["notes", "questions", "answers", "summary"];
 const PRICE = "$25";
 const CONTACT = "https://t.me/danypak";
+const DEVICES_PHRASE = "two devices";
+const DEVICES_EXAMPLE = "your laptop and your phone";
+const ONE_TOO_MANY = "a third";
+const COURSE_DOCS = [];
 /* ---- end generated ---- */
 
 /* Sales copy lives here rather than being retyped at each call site: the lock
