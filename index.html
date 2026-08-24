@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>College Physics IA — mechanics and electromagnetism, worked out</title>
+  <!-- The link-preview card. Generated: see apply-config.py. -->
+  <!--gen:og--><meta property="og:type" content="website">
+    <meta property="og:site_name" content="College Physics IA">
+    <meta property="og:title" content="College Physics IA — mechanics and electromagnetism, worked out">
+    <meta property="og:description" content="Notes and exam-style problems for College Physics IA: mechanics and electromagnetism, taught from zero. Module 01 is free in full. Every problem is worked line by line with the marking points, and every wrong answer names the misunderstanding it reveals.">
+    <meta property="og:url" content="https://danypak1.github.io/phys1a/">
+    <meta property="og:image" content="https://danypak1.github.io/phys1a/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="College Physics IA — Mechanics &amp; Electromagnetism">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="College Physics IA — mechanics and electromagnetism, worked out">
+    <meta name="twitter:description" content="Notes and exam-style problems for College Physics IA: mechanics and electromagnetism, taught from zero. Module 01 is free in full. Every problem is worked line by line with the marking points, and every wrong answer names the misunderstanding it reveals.">
+    <meta name="twitter:image" content="https://danypak1.github.io/phys1a/og.png"><!--/gen-->
   <meta name="description" content="<!--gen:metaDescription-->Notes and exam-style problems for College Physics IA: mechanics and electromagnetism, taught from zero. Module 01 is free in full. Every problem is worked line by line with the marking points, and every wrong answer names the misunderstanding it reveals.<!--/gen-->">
-  <link rel="stylesheet" href="styles.css?v=54">
+  <link rel="stylesheet" href="styles.css?v=55">
   <!-- Bespoke mark, not the kit's generic emoji-via-config icon — see course.html
        for why. Colours are baked in since a favicon has no page stylesheet. -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%232563eb'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5' transform='rotate(60 12 12)'/><ellipse cx='12' cy='12' rx='8' ry='3.2' fill='none' stroke='white' stroke-width='1.5' transform='rotate(-60 12 12)'/><circle cx='12' cy='12' r='1.6' fill='white'/></svg>">
@@ -283,7 +297,7 @@
           <li>The mock exam and the pass over everything you got wrong</li>
           <li>Two devices at a time — your laptop and your phone</li>
         </ul>
-        <a class="btn" href="https://t.me/danypak" target="_blank" rel="noopener">Get a key — $25</a>
+        <a class="btn" href="https://t.me/danypak?text=Hi%21%20I%27d%20like%20a%20key%20for%20College%20Physics%20IA%20%28%2425%29." target="_blank" rel="noopener">Get a key — $25</a>
       </div>
     </div>
     <!--/gen-->
@@ -305,5 +319,31 @@
       <!--gen:attribution-->Independent study guide for College Physics IA. Problem material adapted from OpenStax University Physics Volumes 1–2, © OpenStax/Rice University, licensed under CC BY 4.0. Explanations, worked solutions and commentary are original work. Not affiliated with or endorsed by any university or instructor.<!--/gen-->
     </p>
   </div>
+  <!--gen:beacon--><script>
+    /* Two counts, no identity: the page was opened, and a link to the
+       chat was followed. Once per browser session, never awaited, and
+       wrapped so that a counter can never break the page it measures. */
+    (function () {
+      var W = "https://phys1a-api.danypak.workers.dev", C = "phys1a";
+      function ping(kind) {
+        try {
+          var k = "beacon:" + C + ":" + kind;
+          if (sessionStorage.getItem(k)) return;
+          sessionStorage.setItem(k, "1");
+        } catch (e) { /* private mode: count it, do not dedupe it */ }
+        try {
+          fetch(W + "/beacon", { method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ course: C, kind: kind, surface: "landing" }),
+            keepalive: true }).catch(function () {});
+        } catch (e) {}
+      }
+      ping("visit");
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest('a[href*="t.me/"]');
+        if (a) ping("buy_click");
+      }, true);
+    }());
+  </script><!--/gen-->
 </body>
 </html>
