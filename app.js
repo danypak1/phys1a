@@ -86,8 +86,8 @@ const HAS_PROBLEMS = false;
 const HAS_SIMS = true;
 const HAS_EXAM = true;
 const SURFACES = ["notes", "questions", "answers", "summary"];
-const PRICE = "$25";
-const CONTACT = "https://t.me/danypak?text=Hi%21%20I%27d%20like%20a%20key%20for%20College%20Physics%20IA%20%28%2425%29.";
+const PRICE = "$5";
+const CONTACT = "https://t.me/danypak?text=Hi%21%20I%27d%20like%20a%20key%20for%20College%20Physics%20IA%20%28%245%29.";
 const DEVICES_PHRASE = "two devices";
 const DEVICES_EXAMPLE = "your laptop and your phone";
 const ONE_TOO_MANY = "a third";
@@ -851,7 +851,7 @@ function scrollToPending(body) {
 /* Two different people see this card, and they must not be told the same thing.
    Someone who has never bought is deciding whether to; someone whose session
    just ended has already paid, and showing them a padlock, the sales pitch and a
-   $25 button reads as "pay again" — the likeliest support message this product
+   price button reads as "pay again" — the likeliest support message this product
    can generate. The server cannot tell them apart (it returns the same 401 for an
    evicted slot as for no key at all, deliberately, so a stranger learns nothing),
    but the browser can: only a device that had a token can have lost one. */
@@ -902,7 +902,7 @@ function renderModuleTeaser(m, body, retry) {
      rejected token is cleared, which drops the reader back to "signed out", and
      this is the screen they land on for a module tab. Found by walking the path
      for real — the first version of the fix only covered renderLock, so a buyer
-     whose slot had just been taken still met "Module 07 needs a key" and a $25
+     whose slot had just been taken still met "Module 07 needs a key" and a price
      button on the chapter they had opened. */
   const hadKey = Api.everSignedIn;
   body.innerHTML = `
